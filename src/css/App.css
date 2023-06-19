@@ -1,0 +1,15 @@
+.container {
+  position: relative;
+  width: 1000px;
+  height: 800px;
+  overflow: hidden;
+  margin: auto;
+  background-color: rgb(202, 157, 112);
+}
+
+.confettiButton {
+  width: 1000px;
+  height: 800px;
+  text-align: center;
+  margin: auto;
+}
