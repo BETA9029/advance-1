@@ -12,6 +12,7 @@ function App() {
     (confettiSpeed + confettiNumber * confettiDelay) * 1000;
 
   const onButton = () => {
+    if (action) return;
     setAction(true);
     setTimeout(() => {
       setAction(false);
