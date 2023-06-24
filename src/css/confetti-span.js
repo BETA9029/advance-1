@@ -1,19 +1,19 @@
 /** @jsxImportSource @emotion/react */
 import { css, keyframes } from "@emotion/react";
 
-export const confettiSpan = (num, delay, speed) => {
+export const createConfetti = (num, delay, speed) => {
   return css`
     position: absolute;
     top: -10%;
     width: 2.5vw;
     height: 1.5vw;
-    ${position()};
-    ${confettiColor()};
-    ${confettiAnimetion(num, delay, speed)};
+    ${selectPosition()};
+    ${selectColor()};
+    ${createAnimetion(num, delay, speed)};
   `;
 };
 
-function confettiAnimetion(num, delay, speed) {
+function createAnimetion(num, delay, speed) {
   const transX = num % 2 === 0 ? 30 : -30;
   const confettiMove = keyframes`
     0% {
@@ -47,7 +47,7 @@ function confettiAnimetion(num, delay, speed) {
   `;
 }
 
-function confettiColor() {
+function selectColor() {
   const color = [
     "red",
     "blue",
@@ -66,7 +66,7 @@ function confettiColor() {
   `;
 }
 
-function position() {
+function selectPosition() {
   const randomPosition = Math.floor(Math.random() * 9) + 2;
   return css`
     left: ${randomPosition * 10}%;
